@@ -16,7 +16,7 @@ public class InquiryController {
     @Autowired
     private InquiryService inquiryService;
 
-    @PostMapping(GlobalUrl.ROOT_URI)
+    @PostMapping(GlobalUrl.INQUIRY)
     public ApiResponseDto<List<Feed>> feeds() { return inquiryService.feeds(); }
 
 }
