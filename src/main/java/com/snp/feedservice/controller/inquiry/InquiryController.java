@@ -7,6 +7,7 @@ import com.snp.feedservice.service.inquiry.InquiryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class InquiryController {
     private InquiryService inquiryService;
 
     @PostMapping(GlobalUrl.INQUIRY)
+    @ResponseBody
     public ApiResponseDto<List<Feed>> feeds() { return inquiryService.feeds(); }
 
 }
