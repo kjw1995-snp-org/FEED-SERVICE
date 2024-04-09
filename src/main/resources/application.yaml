@@ -1,6 +1,6 @@
 spring:
   application:
-    name: feed
+    name: feed-service
   profiles:
     active: local
   config:
