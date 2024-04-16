@@ -25,9 +25,6 @@ public class Feed {
     @Column(name = "member_idx", nullable = false)
     private Integer memberIdx;
 
-    @Column(name = "title", nullable = false)
-    private String title;
-
     @Lob
     @Column(name = "content", nullable = false)
     private String content;

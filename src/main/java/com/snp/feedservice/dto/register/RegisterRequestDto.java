@@ -7,8 +7,6 @@ public class RegisterRequestDto {
 
     private Integer memberIdx;
 
-    private String title;
-
     private String content;
 
 }

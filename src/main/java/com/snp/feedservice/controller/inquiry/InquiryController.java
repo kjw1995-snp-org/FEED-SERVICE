@@ -1,6 +1,7 @@
 package com.snp.feedservice.controller.inquiry;
 
 import com.snp.feedservice.dto.api.response.ApiResponseDto;
+import com.snp.feedservice.dto.inquiry.InquiryResponseDto;
 import com.snp.feedservice.global.GlobalUrl;
 import com.snp.feedservice.jpa.entity.Feed;
 import com.snp.feedservice.service.inquiry.InquiryService;
@@ -19,6 +20,6 @@ public class InquiryController {
 
     @PostMapping(GlobalUrl.INQUIRY)
     @ResponseBody
-    public ApiResponseDto<List<Feed>> feeds() { return inquiryService.feeds(); }
+    public ApiResponseDto<List<InquiryResponseDto>> feeds() { return inquiryService.feeds(); }
 
 }

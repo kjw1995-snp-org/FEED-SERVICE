@@ -26,7 +26,6 @@ public class RegisterServiceImpl implements RegisterService {
 
             feed = Feed.builder()
                        .memberIdx(requestDto.getMemberIdx())
-                       .title(requestDto.getTitle())
                        .content(requestDto.getContent())
                        .registDate(LocalDateTime.now())
                        .build();
