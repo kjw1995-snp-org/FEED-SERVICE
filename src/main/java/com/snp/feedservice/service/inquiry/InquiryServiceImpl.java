@@ -15,7 +15,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class InquiryServiceImpl implements InquiryService {
@@ -60,11 +62,17 @@ public class InquiryServiceImpl implements InquiryService {
         );
 
         List<MemberinquiryResponseDto> memberInquiryResponseDto = apiResponseDto.getData();
+        Map<Integer, MemberinquiryResponseDto> memberMap = new HashMap<Integer, MemberinquiryResponseDto>();
+        for(MemberinquiryResponseDto responseDto : memberInquiryResponseDto){
+            memberMap.put(responseDto.getMemberIdx(), responseDto);
+        }
 
-        for(int i = 0; i < memberInquiryResponseDto.size(); i++){
+        for(InquiryResponseDto dto : result) {
 
-            result.get(i).setMemberId(memberInquiryResponseDto.get(i).getMemberId());
-            result.get(i).setMemberName(memberInquiryResponseDto.get(i).getMemberName());
+            if(memberMap.containsKey(dto.getMemberIdx())){
+                dto.setMemberId(memberMap.get(dto.getMemberIdx()).getMemberId());
+                dto.setMemberName(memberMap.get(dto.getMemberIdx()).getMemberName());
+            }
 
         }
 
