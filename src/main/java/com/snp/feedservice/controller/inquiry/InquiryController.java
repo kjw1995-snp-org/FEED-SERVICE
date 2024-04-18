@@ -3,7 +3,6 @@ package com.snp.feedservice.controller.inquiry;
 import com.snp.feedservice.dto.api.response.ApiResponseDto;
 import com.snp.feedservice.dto.inquiry.InquiryResponseDto;
 import com.snp.feedservice.global.GlobalUrl;
-import com.snp.feedservice.jpa.entity.Feed;
 import com.snp.feedservice.service.inquiry.InquiryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
